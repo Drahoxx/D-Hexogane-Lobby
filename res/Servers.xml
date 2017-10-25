@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+	<!--- Server id (one different for each server)-->
+	<server id="1">
+		<!--- The diplay name of your server -->
+		<name>ServerName</name>
+		<!--- The bungee name of your server -->
+		<bungeeName>BungeeServerName</bungeeName>
+		<!--- The MOTD you want -->
+		<motd>MOTD</motd>
+		
+		<item>ItemDefault</item>
+	</server>
+</servers>

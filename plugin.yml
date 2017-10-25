@@ -1,0 +1,9 @@
+name: HexoganeLobby
+version: 1.0
+main: fr.drahoxx.lobby.Main
+author: Drahoxx
+commands:
+ refreshFiles:
+  description: Refresh compass inventory, server list, items, ...
+  usage: /refreshFiles
+  aliases: [rf, refreshfiles, rfshfiles, rfile, rfiles]

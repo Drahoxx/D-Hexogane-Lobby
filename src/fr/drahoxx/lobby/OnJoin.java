@@ -20,22 +20,16 @@ public class OnJoin implements Listener {
 	
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
-		Bukkit.broadcastMessage("a");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try {
-			Bukkit.broadcastMessage("b");
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			File file = new File(Main.main.getDataFolder()+File.separator+"Config.xml");
-			Bukkit.broadcastMessage("c");
 			Document doc = builder.parse(file);
 			NodeList list = doc.getElementsByTagName("giveTeleporterItemOnJoin");
-			Bukkit.broadcastMessage("d");
 			for(int i = 0; i<list.getLength();i++) {
-				Bukkit.broadcastMessage("e");
 				Element element = (Element) list.item(i);
 				Boolean b = Boolean.valueOf(element.getTextContent());
 				if(b) {
-					Bukkit.broadcastMessage("f");
 					e.getPlayer().getInventory().setItem(Integer.parseInt(element.getAttribute("Slot")), Item.getItemByName("TeleporterItem").getItemStack());
 				}
 			}
